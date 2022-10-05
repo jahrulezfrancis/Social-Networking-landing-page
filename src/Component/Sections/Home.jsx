@@ -1,8 +1,9 @@
-import { Box, Heading, HStack, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Icon, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
 import { GoPrimitiveDot } from "react-icons/go"
 import VidImage from "../Images/vid-image.png"
 import LaptopImage from "../Images/pc-on-table.png"
 import DataCableImage from "../Images/cable.png"
+import {AiOutlineStar} from "react-icons/ai"
 
 
 export function AboutNetboks() {
@@ -43,6 +44,18 @@ export function AboutNetboks() {
                     </VStack>
                 </HStack>
             </HStack>
+        </Box>
+    )
+}
+
+export function AchieveMents(){
+    return(
+        <Box>
+            <VStack>
+                <HStack>
+                    <Icon as={AiOutlineStar} />
+                </HStack>
+            </VStack>
         </Box>
     )
 }
