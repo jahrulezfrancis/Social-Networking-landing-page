@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { HeaderSec } from "../Header/HeaderSection";
 import { NavigatonBar } from "../Header/Navigation";
-import { AboutNetboks } from "../Sections/Home";
+import { AboutNetboks, AchieveMents } from "../Sections/Home";
 
 export default function HomePage() {
     return (
@@ -9,6 +9,7 @@ export default function HomePage() {
             <NavigatonBar />
             <HeaderSec />
             <AboutNetboks />
+            <AchieveMents />
         </Box>
 
     )
