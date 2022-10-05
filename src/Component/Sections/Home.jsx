@@ -1,9 +1,12 @@
-import { Box, Heading, HStack, Icon, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Heading, HStack, Icon, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
 import { GoPrimitiveDot } from "react-icons/go"
 import VidImage from "../Images/vid-image.png"
 import LaptopImage from "../Images/pc-on-table.png"
 import DataCableImage from "../Images/cable.png"
-import {AiOutlineStar} from "react-icons/ai"
+import { AiOutlineRight, AiOutlineStar } from "react-icons/ai"
+import { BsTrophy, BsGithub } from "react-icons/bs"
+import { BiRightArrowAlt } from "react-icons/bi"
+import React from "react";
 
 
 export function AboutNetboks() {
@@ -48,14 +51,62 @@ export function AboutNetboks() {
     )
 }
 
-export function AchieveMents(){
-    return(
+export function AchieveMentsTemp(props) {
+    return (
         <Box>
-            <VStack>
-                <HStack>
-                    <Icon as={AiOutlineStar} />
+            <VStack align='start' justify='center' w='21em' p='1em'>
+                <HStack align='center'>
+                    {props.headingIcon}
+                    <Text>{props.heading}</Text>
                 </HStack>
+                <HStack>
+                    <Flex>
+                        {props.Avatar1}
+                        {props.Avatar2}
+                        {props.Avatar3}
+                    </Flex>
+                    <Heading fontSize='1em'>{props.leftText}<span style={{ color: "#217BF4" }}>{props.coloredText}</span> {props.rightText}</Heading>
+                </HStack>
+                <Text>
+                    More than 2 billion we people over <br />
+                    countries use socibooks we to stay <br />
+                    in touch with friends.
+                </Text>
+                <Button bgColor={props.btnBgColor} color={props.btnColor} rightIcon={<AiOutlineRight />}>{props.buttonText}</Button>
             </VStack>
         </Box>
+    )
+}
+
+export function AchieveMents() {
+    return (
+        <React.Fragment>
+            <Box mt='5em'>
+                <HStack>
+                    <AchieveMentsTemp headingIcon={<Icon fontSize='1.75em' as={AiOutlineStar} />}
+                        heading='4.8 Rating' Avatar1={<Avatar size='xs' />} Avatar2={<Avatar size='xs' />}
+                        Avatar3={<Avatar size='xs' />} coloredText='+836' rightText='members' buttonText='Join Community' btnColor='#217BF4'
+                    />
+                    <AchieveMentsTemp headingIcon={<Icon fontSize='1.75em' as={BsTrophy} />}
+                        heading='Awwwards' Avatar1={<Icon fontSize='2em' as={BsGithub} />} leftText='Best of ' coloredText='2021'
+                        rightText='on github' buttonText='Go to awards'
+                    />
+                    <VStack align='start'>
+                        <Text>Our Achievement</Text>
+                        <Heading>
+                            We are Connecting <br />
+                            You The Digital Life.
+                        </Heading>
+                        <Text>
+                            The scope the Social Media becomes crucial Is <br />
+                            helps the business to directly engage with their <br />
+                            needs and wants.
+                        </Text>
+                        <Button h='3em' p='1em' alignItems='center' color='white' _hover='none' bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
+                    </VStack>
+                </HStack>
+            </Box>
+        </React.Fragment>
+
     )
 }
