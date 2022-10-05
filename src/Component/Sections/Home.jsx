@@ -35,7 +35,7 @@ export function AboutNetboks() {
                         </List>
                     </Stack>
                 </VStack>
-                <HStack>
+                <HStack gap={5}>
                     <Image src={VidImage} alt='' />
                     <VStack>
                         <Image src={LaptopImage} alt='' />
