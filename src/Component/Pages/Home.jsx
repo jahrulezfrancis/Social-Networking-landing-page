@@ -3,6 +3,7 @@ import { HeaderSec } from "../Header/HeaderSection";
 import { NavigatonBar } from "../Header/Navigation";
 import { Features } from "../Sections/Features";
 import { AboutNetboks, AchieveMents } from "../Sections/Home";
+import { TeamMembers } from "../Sections/Team";
 
 export default function HomePage() {
     return (
@@ -12,6 +13,7 @@ export default function HomePage() {
             <AboutNetboks />
             <AchieveMents />
             <Features />
+            <TeamMembers />
         </Box>
 
     )
