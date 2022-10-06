@@ -104,7 +104,7 @@ export function AchieveMents() {
                             helps the business to directly engage with their <br />
                             needs and wants.
                         </Text>
-                        <Button h='3em' p='1em' alignItems='center' color='white' _hover='none' bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
+                        <Button h='3em' p='1em' alignItems='center' color='white' _hover={{ bgColor: 'teal' }} bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
                     </VStack>
                 </HStack>
             </Box>
