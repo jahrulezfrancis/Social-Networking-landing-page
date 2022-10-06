@@ -54,10 +54,10 @@ export function AboutNetboks() {
 export function AchieveMentsTemp(props) {
     return (
         <Box>
-            <VStack align='start' justify='center' w='21em' p='1em'>
+            <VStack align='start' justify='center' w='21em' p='1em' gap='1em'>
                 <HStack align='center'>
                     {props.headingIcon}
-                    <Text>{props.heading}</Text>
+                    <Text color='#0A093D'>{props.heading}</Text>
                 </HStack>
                 <HStack>
                     <Flex>
@@ -65,9 +65,9 @@ export function AchieveMentsTemp(props) {
                         {props.Avatar2}
                         {props.Avatar3}
                     </Flex>
-                    <Heading fontSize='1em'>{props.leftText}<span style={{ color: "#217BF4" }}>{props.coloredText}</span> {props.rightText}</Heading>
+                    <Heading color='#5D5B70' fontSize='1em'>{props.leftText}<span style={{ color: "#217BF4" }}>{props.coloredText}</span> {props.rightText}</Heading>
                 </HStack>
-                <Text>
+                <Text color='#8C8C8C' fontSize='1em'>
                     More than 2 billion we people over <br />
                     countries use socibooks we to stay <br />
                     in touch with friends.
@@ -82,21 +82,23 @@ export function AchieveMents() {
     return (
         <React.Fragment>
             <Box mt='5em'>
-                <HStack>
-                    <AchieveMentsTemp headingIcon={<Icon fontSize='1.75em' as={AiOutlineStar} />}
+                <HStack justify='center'>
+                    <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={AiOutlineStar} />}
                         heading='4.8 Rating' Avatar1={<Avatar size='xs' />} Avatar2={<Avatar size='xs' />}
                         Avatar3={<Avatar size='xs' />} coloredText='+836' rightText='members' buttonText='Join Community' btnColor='#217BF4'
                     />
-                    <AchieveMentsTemp headingIcon={<Icon fontSize='1.75em' as={BsTrophy} />}
-                        heading='Awwwards' Avatar1={<Icon fontSize='2em' as={BsGithub} />} leftText='Best of ' coloredText='2021'
+                    <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={BsTrophy} />}
+                        heading='Awwwards' Avatar1={<Icon fontSize='2em' color='red' as={BsGithub} />} leftText='Best of ' coloredText='2021'
                         rightText='on github' buttonText='Go to awards'
                     />
-                    <VStack align='start'>
-                        <Text>Our Achievement</Text>
-                        <Heading>
-                            We are Connecting <br />
-                            You The Digital Life.
-                        </Heading>
+                    <VStack align='start' gap='2em'>
+                        <Stack>
+                            <Text fontWeight='500' color='#217BF4' fontSize='1.5em'>Our Achievement</Text>
+                            <Heading color='#0A093D' fontFamily='Inter' fontWeight='600' fontSize='3em'>
+                                We are Connecting <br />
+                                You The Digital Life.
+                            </Heading>
+                        </Stack>
                         <Text>
                             The scope the Social Media becomes crucial Is <br />
                             helps the business to directly engage with their <br />
