@@ -11,7 +11,7 @@ function MembersTemplate(props) {
         <Box>
             <Image align='center' justifyContent='center' src={AbstractImg} alt='user image' position='absolute' />
             <Image pl='.9em' pt='.7em' align='center' justifyContent='center' src={props.Image} alt='user image' position='relative' />
-            <Heading fontSize='1.5em' fontColor='#2F2C4A' textAlign='center' pt='1em'>{props.name}</Heading>
+            <Heading fontSize='1.5em' color='#2F2C4A' textAlign='center' pt='1em'>{props.name}</Heading>
             <Text textAlign='center'>{`@${props.username}`}</Text>
         </Box>
     )
