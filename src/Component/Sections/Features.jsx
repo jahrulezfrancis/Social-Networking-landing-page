@@ -14,7 +14,7 @@ function FeaturesTemp(props) {
                 <Image src={props.image} alt='community image' />
                 <VStack align='start'>
                     <Heading color='#2F2C4A' fontSize='1.3em'>{props.heading}</Heading>
-                    <Text color='#656464' fontWeight='400' fontSize='.9em'>{props.text1} <br /> {props.text2} <br /> {props.text3} </Text>
+                    <Text color='#656464' fontWeight='500' fontSize='.9em'>{props.text1} <br /> {props.text2} <br /> {props.text3} </Text>
                 </VStack>
             </HStack>
         </Box>
