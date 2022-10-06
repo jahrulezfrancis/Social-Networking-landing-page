@@ -9,7 +9,7 @@ import Article from "../Images/article.png"
 
 function FeaturesTemp(props) {
     return (
-        <Box w='30em' h='8em' boxShadow='14px 22px 52px -12px rgba(127, 127, 127, 0.13);'>
+        <Box w='30em' h='8em' boxShadow='14px 22px 52px -12px rgba(127, 127, 127, 0.13)'>
             <HStack w="100%">
                 <Image src={props.image} alt='community image' />
                 <VStack align='start'>
