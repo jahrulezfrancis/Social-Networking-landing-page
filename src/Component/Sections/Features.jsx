@@ -34,12 +34,12 @@ export function Features() {
                     </Text>
                 </VStack>
                 <Flex flexWrap='wrap' p='2em' justify='space-around' rowGap='5em'>
-                        <FeaturesTemp image={One} heading='Members, Friends' text1='Members, Friends Connection ( like' text2='followers ), Private Message' />
-                        <FeaturesTemp image={RedGroup} heading='Group' text1='Your users can create groups to let other' text2='users to join and talk' />
-                        <FeaturesTemp image={Forum} heading='Forum' text1='Forum is ready by BBPress. Your users' text2='can make topics and talk.' />
-                        <FeaturesTemp image={AnonIcon} heading='Custom Module' text1='You can create Members, Groups' text2='Module. We already created 3 modules.' text3='It is by drag & drop live builder.' />
-                        <FeaturesTemp image={ListImage} heading='List Builder' text1='Members, Groups list can be modified by' text2='drag & drop live builder.' />
-                        <FeaturesTemp image={Article} heading='List Scroll Effects' text1='You can always change by your tastes.' text2='8 different scroll effects are ready.' />
+                    <FeaturesTemp image={One} heading='Members, Friends' text1='Members, Friends Connection ( like' text2='followers ), Private Message' />
+                    <FeaturesTemp image={RedGroup} heading='Group' text1='Your users can create groups to let other' text2='users to join and talk' />
+                    <FeaturesTemp image={Forum} heading='Forum' text1='Forum is ready by BBPress. Your users' text2='can make topics and talk.' />
+                    <FeaturesTemp image={AnonIcon} heading='Custom Module' text1='You can create Members, Groups' text2='Module. We already created 3 modules.' text3='It is by drag & drop live builder.' />
+                    <FeaturesTemp image={ListImage} heading='List Builder' text1='Members, Groups list can be modified by' text2='drag & drop live builder.' />
+                    <FeaturesTemp image={Article} heading='List Scroll Effects' text1='You can always change by your tastes.' text2='8 different scroll effects are ready.' />
                 </Flex>
             </VStack>
         </Box>
