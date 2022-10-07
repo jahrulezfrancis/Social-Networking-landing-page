@@ -29,7 +29,7 @@ export function TeamMembers() {
                         fari scrambled it.
                     </Text>
                 </Stack>
-                <HStack align='center' justify='space-around' w='25em' p='.5em' bgColor='rgba(127, 127, 127, 0.13)'>
+                <HStack borderRadius='.5em' align='center' justify='space-around' w='25em' p='.5em' bgColor='rgba(127, 127, 127, 0.13)'>
                     <Button>Newest</Button>
                     <Button>Popular</Button>
                     <Button size='md' bgColor='#217BF4'>Active</Button>
