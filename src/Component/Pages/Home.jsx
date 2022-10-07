@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { HeaderSec } from "../Header/HeaderSection";
 import { NavigatonBar } from "../Header/Navigation";
+import { BlogSection } from "../Sections/Blog";
 import { Features } from "../Sections/Features";
 import { AboutNetboks, AchieveMents } from "../Sections/Home";
 import { MobileMockUp } from "../Sections/MobileMockup";
@@ -16,6 +17,7 @@ export default function HomePage() {
             <Features />
             <TeamMembers />
             <MobileMockUp />
+            <BlogSection />
         </Box>
 
     )
