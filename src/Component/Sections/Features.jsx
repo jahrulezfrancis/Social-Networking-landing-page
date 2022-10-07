@@ -23,12 +23,12 @@ function FeaturesTemp(props) {
 
 export function Features() {
     return (
-        <Box mt='5em'>
+        <Box mt='10em' w='100%'>
             <VStack justify='center'>
-                <VStack>
-                    <Text>Our Community</Text>
-                    <Heading>Community Main Feature</Heading>
-                    <Text color='#656464' fontSize='.9em' textAlign='center'>
+                <VStack gap='1em'>
+                    <Text color='#217BF4' fontSize='1.2em' fontWeight='500'>Our Community</Text>
+                    <Heading color='#2F2C4A' fontSize='2.2em'>Community Main Feature</Heading>
+                    <Text textAlign='center' color='#656464' fontWeight='500' fontSize='.9em'>
                         The wise man therefore always holds in these matters <br />
                         to this principle of selection.
                     </Text>

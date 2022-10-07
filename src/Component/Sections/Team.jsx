@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Text, VStack, Image } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Text, VStack, Image, Stack } from "@chakra-ui/react";
 import AbstractImg from "../Images/Abstrack.png"
 import Person1 from "../Images/pers1.png"
 import Person2 from "../Images/pers2.png"
@@ -19,14 +19,16 @@ function MembersTemplate(props) {
 
 export function TeamMembers() {
     return (
-        <Box>
-            <VStack>
-                <Text>Valuable Team</Text>
-                <Heading>Our Active Members</Heading>
-                <Text>
-                    when an unknown printer took a galley of type and meeting <br />
-                    fari scrambled it.
-                </Text>
+        <Box mt='3em'>
+            <VStack pt='2em'>
+                <Stack mb='2em' gap='.5em' align='center'>
+                    <Text color='#217BF4' fontSize='1.2em' fontWeight='500'>Valuable Team</Text>
+                    <Heading color='#2F2C4A' fontSize='2.2em'>Our Active Members</Heading>
+                    <Text textAlign='center' color='#656464' fontWeight='500' fontSize='.9em'>
+                        when an unknown printer took a galley of type and meeting <br />
+                        fari scrambled it.
+                    </Text>
+                </Stack>
                 <HStack align='center' justify='space-around' w='25em' p='.5em' bgColor='rgba(127, 127, 127, 0.13)'>
                     <Button>Newest</Button>
                     <Button>Popular</Button>

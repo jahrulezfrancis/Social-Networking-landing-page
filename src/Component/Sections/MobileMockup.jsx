@@ -15,7 +15,7 @@ export function MobileMockUp() {
                         You Can Easily Find <br />
                         This App…!
                     </Heading>
-                    <Text  color='#656464' fontWeight='500' fontSize='.9em'>
+                    <Text color='#656464' fontWeight='500' fontSize='.9em'>
                         I say chap that’s suing lavatory chip shop <br />
                         gosh off his smashing boot are you taking <br />
                         the piss posh loo brilliant.
