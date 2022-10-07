@@ -30,8 +30,8 @@ export function BlogSection() {
         <Box mt='5em'>
             <VStack gap='2em'>
                 <Stack align='center'>
-                    <Text>Get Our Application</Text>
-                    <Heading>Latest News</Heading>
+                    <Text color='#217BF4' fontSize='1.1em'>Get Our Application</Text>
+                    <Heading color='#0A093D' fontSize='2.2em'>Latest News</Heading>
                 </Stack>
                 <HStack gap='2em'>
                     <BlogPostTemplate textColor='#656464' iconColor='#656464' Image={PcImage} HeadingText1='It Does Not Matter Hows' HeadingText2='Slowly go as Long' />
