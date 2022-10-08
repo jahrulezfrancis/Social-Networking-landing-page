@@ -30,12 +30,12 @@ export function TeamMembers() {
                         fari scrambled it.
                     </Text>
                 </Stack>
-                <HStack borderRadius='.5em' align='center' justify='space-around' w='25em' p='.5em' bgColor='rgba(127, 127, 127, 0.13)'>
+                <HStack borderRadius='.5em' align='center' justify='space-around' w={mobileDevice ? '20em' : '25em'} p='.5em' bgColor='rgba(127, 127, 127, 0.13)'>
                     <Button>Newest</Button>
                     <Button>Popular</Button>
                     <Button size='md' bgColor='#217BF4'>Active</Button>
                 </HStack>
-                <Flex pt='5em' w='80%'  direction={mobileDevice ? 'column' : 'row'} align={mobileDevice ? 'center' : 'space-around'} justify={mobileDevice ? 'center' : 'space-around'} spacing={5}>
+                <Flex pt='5em' w='80%' direction={mobileDevice ? 'column' : 'row'} align={mobileDevice ? 'center' : 'space-around'} justify={mobileDevice ? 'center' : 'space-around'} spacing={5}>
                     <MembersTemplate Image={Person1} username='Rajman' name='Fahim Rahman' />
                     <MembersTemplate Image={Person2} username='Rahman' name='Kazi Rahman' />
                     <MembersTemplate Image={Person3} username='Master' name='Masterero Ali' />

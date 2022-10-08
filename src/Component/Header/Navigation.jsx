@@ -1,11 +1,12 @@
-import { Box, Flex, Image, List, ListItem, InputGroup, InputLeftElement, Input, HStack, Button } from "@chakra-ui/react";
+import { Box, Flex, Image, List, ListItem, InputGroup, InputLeftElement, Input, HStack, Button, useMediaQuery } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import HeaderLogo from "../Images/logo.png"
 import { MdSearch } from "react-icons/md"
 
 export function NavigatonBar() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box p='1.5em' position='fixed' top='0' left='0' right='0' bg='#ffffff' zIndex='10'>
+        <Box display={mobileDevice ? 'none' : 'block'} p='1.5em' position='fixed' top='0' left='0' right='0' bg='#ffffff' zIndex='10' w='100vw'>
             <List listStyleType='none'>
                 <HStack justify='space-around'>
                     <Flex alignItems='center' p='2' columnGap='2em'>

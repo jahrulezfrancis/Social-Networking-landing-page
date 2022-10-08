@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Image, Input, InputGroup, InputRightElement, List, ListItem, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Image, Input, InputGroup, InputRightElement, useMediaQuery, List, ListItem, Stack, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import FaceBook from "../Images/facebook.png"
 import Twitter from "../Images/Twitter.png"
@@ -33,9 +33,10 @@ export function ListTemplate(props) {
 }
 
 export function Footer() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box bgColor='#2B2B39' mt='5em'>
-            <HStack justify='space-around' p='2em' align='start'>
+            <Flex direction={mobileDevice ? 'column' : 'row'} rowGap='3em' justify='space-around' p='2em' align='start'>
                 <ListTemplate header='Home' item1='Home' item2='Community' item3='Events' item4='Contact' />
                 <ListTemplate header='Resources' item1='Blog' item2='News' item3='Guide' item4='Help Center' />
                 <ListTemplate header='Community' item1='NewsFeed' item2='Profile' item3='Friends' item4='Forums' />
@@ -47,8 +48,8 @@ export function Footer() {
                         <InputRightElement justifyContent='flex-end' w='10em' children={<Button justifyContent='flex-end' alignItems='center' w='7em'>Subscribe</Button>} />
                     </InputGroup>
                 </Stack>
-            </HStack>
-            <HStack bgColor='#20202D' h='5em' align='center' justify='space-around'>
+            </Flex>
+            <Flex direction={mobileDevice ? "column" : 'row'} bgColor='#20202D' h={mobileDevice ? '13em' : '5em'} align='center' justify='space-around'>
                 <Text color='white'>Besnik Creative Agency.</Text>
                 <Image src={HeaderLogo} alt='footer logo' />
                 <HStack>
@@ -57,7 +58,7 @@ export function Footer() {
                     <Image src={FaceBook} alt='social Icons' />
                     <Image src={Linkedin} alt='social Icons' />
                 </HStack>
-            </HStack>
+            </Flex>
         </Box>
     )
 }
