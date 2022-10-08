@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Text, VStack, Image, Stack } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Text, VStack, Image, Stack, Flex, useMediaQuery } from "@chakra-ui/react";
 import AbstractImg from "../Images/Abstrack.png"
 import Person1 from "../Images/pers1.png"
 import Person2 from "../Images/pers2.png"
@@ -18,6 +18,7 @@ function MembersTemplate(props) {
 }
 
 export function TeamMembers() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box mt='3em'>
             <VStack pt='2em'>
@@ -34,12 +35,12 @@ export function TeamMembers() {
                     <Button>Popular</Button>
                     <Button size='md' bgColor='#217BF4'>Active</Button>
                 </HStack>
-                <HStack pt='5em' w='80%' align='start' justify='space-around' spacing={5}>
+                <Flex pt='5em' w='80%'  direction={mobileDevice ? 'column' : 'row'} align={mobileDevice ? 'center' : 'space-around'} justify={mobileDevice ? 'center' : 'space-around'} spacing={5}>
                     <MembersTemplate Image={Person1} username='Rajman' name='Fahim Rahman' />
                     <MembersTemplate Image={Person2} username='Rahman' name='Kazi Rahman' />
                     <MembersTemplate Image={Person3} username='Master' name='Masterero Ali' />
                     <MembersTemplate Image={Person4} username='alia' name='Alia Karon' />
-                </HStack>
+                </Flex>
             </VStack>
         </Box>
     )
