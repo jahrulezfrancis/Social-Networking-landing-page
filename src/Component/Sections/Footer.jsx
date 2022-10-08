@@ -1,24 +1,31 @@
-import { Box, Heading, List, ListItem } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Image, Input, InputGroup, InputRightElement, List, ListItem, Stack, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+import FaceBook from "../Images/facebook.png"
+import Twitter from "../Images/Twitter.png"
+import Linkedin from "../Images/Linkedin.png"
+import Instagram from "../Images/instagram.png"
+import HeaderLogo from "../Images/footer-logo.png"
 
 export function ListTemplate(props) {
     return (
         <Box>
-            <List>
-                <ListItem>
-                    <NavLink><Heading>{props.header}</Heading></NavLink>
+            <List spacing='1.5em'>
+                <Box mb='1em'>
+                    <ListItem color='#E7E7E7' fontSize='1.6em' fontWeight='600'>
+                        <NavLink><Heading fontSize='1em' color='white'>{props.header}</Heading></NavLink>
+                    </ListItem>
+                </Box>
+                <ListItem color='#E7E7E7' fontSize='1em' fontWeight='400'>
+                    <NavLink>{props.item1} <br /> {props.secondLine}</NavLink>
                 </ListItem>
-                <ListItem>
-                    <NavLink>{props.item1}</NavLink>
+                <ListItem color='#E7E7E7' fontSize='1em' fontWeight='400'>
+                    <NavLink>{props.item2}</NavLink>
                 </ListItem>
-                <ListItem>
-                    <NavLink>{props.item1}</NavLink>
+                <ListItem color='#E7E7E7' fontSize='1em' fontWeight='400'>
+                    <NavLink>{props.item3}</NavLink>
                 </ListItem>
-                <ListItem>
-                    <NavLink>{props.item1}</NavLink>
-                </ListItem>
-                <ListItem>
-                    <NavLink>{props.item1}</NavLink>
+                <ListItem color='#E7E7E7' fontSize='1em' fontWeight='400'>
+                    <NavLink>{props.item4}</NavLink>
                 </ListItem>
             </List>
         </Box>
@@ -27,8 +34,30 @@ export function ListTemplate(props) {
 
 export function Footer() {
     return (
-        <Box>
-<ListTemplate header='Home' />
+        <Box bgColor='#2B2B39' mt='5em'>
+            <HStack justify='space-around' p='2em' align='start'>
+                <ListTemplate header='Home' item1='Home' item2='Community' item3='Events' item4='Contact' />
+                <ListTemplate header='Resources' item1='Blog' item2='News' item3='Guide' item4='Help Center' />
+                <ListTemplate header='Community' item1='NewsFeed' item2='Profile' item3='Friends' item4='Forums' />
+                <ListTemplate header='Main Link' item1='Members' item2='Activity' item3='Group' item4='Private Group' />
+                <Stack>
+                    <ListTemplate header='Home' item1='Subscribe to be the first one to know' secondLine='about updates. Enter your email' />
+                    <InputGroup>
+                        <Input type='email' placeholder="Email Address" w='20em' />
+                        <InputRightElement justifyContent='flex-end' w='10em' children={<Button justifyContent='flex-end' alignItems='center' w='7em'>Subscribe</Button>} />
+                    </InputGroup>
+                </Stack>
+            </HStack>
+            <HStack bgColor='#20202D' h='5em' align='center' justify='space-around'>
+                <Text color='white'>Besnik Creative Agency.</Text>
+                <Image src={HeaderLogo} alt='footer logo' />
+                <HStack>
+                    <Image src={Twitter} alt='social Icons' />
+                    <Image src={Instagram} alt='social Icons' />
+                    <Image src={FaceBook} alt='social Icons' />
+                    <Image src={Linkedin} alt='social Icons' />
+                </HStack>
+            </HStack>
         </Box>
     )
 }
