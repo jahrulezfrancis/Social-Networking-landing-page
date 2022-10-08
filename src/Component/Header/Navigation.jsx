@@ -5,7 +5,7 @@ import { MdSearch } from "react-icons/md"
 
 export function NavigatonBar() {
     return (
-        <Box p='1.5em'>
+        <Box p='1.5em' position='fixed' top='0' left='0' right='0' bg='#ffffff' zIndex='10'>
             <List listStyleType='none'>
                 <HStack justify='space-around'>
                     <Flex alignItems='center' p='2' columnGap='2em'>
