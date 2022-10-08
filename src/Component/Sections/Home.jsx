@@ -84,31 +84,33 @@ export function AchieveMents() {
     return (
         <React.Fragment>
             <Box mt='5em'>
-                <Flex align={mobileDevice ? 'center' : 'start'} direction={mobileDevice ? 'column' : 'row'} justify='center'>
-                    <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={AiOutlineStar} />}
-                        heading='4.8 Rating' Avatar1={<Avatar size='xs' />} Avatar2={<Avatar size='xs' />}
-                        Avatar3={<Avatar size='xs' />} coloredText='+836' rightText='members' buttonText='Join Community' btnColor='#217BF4'
-                    />
-                    <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={BsTrophy} />}
-                        heading='Awwwards' Avatar1={<Icon fontSize='2em' color='red' as={BsGithub} />} leftText='Best of ' coloredText='2021'
-                        rightText='on github' buttonText='Go to awards'
-                    />
-                </Flex>
-                <VStack align={mobileDevice ? 'center' : 'start'} justify='center' gap='2em' mt={mobileDevice ? '3em' : '0em'}>
-                    <Stack>
-                        <Text textAlign={mobileDevice ? 'center' : 'left'} fontWeight='500' color='#217BF4' fontSize='1.5em'>Our Achievement</Text>
-                        <Heading textAlign={mobileDevice ? 'center' : 'left'} color='#0A093D' fontFamily='Inter' fontWeight='600' fontSize='2em'>
-                            We are Connecting <br />
-                            You To The Digital Life.
-                        </Heading>
-                    </Stack>
-                    <Text textAlign={mobileDevice ? 'center' : 'left'}>
-                        The scope the Social Media becomes crucial Is <br />
-                        helps the business to directly engage with their <br />
-                        needs and wants.
-                    </Text>
-                    <Button h='3em' p='1em' alignItems='center' color='white' _hover={{ bgColor: 'teal' }} bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
-                </VStack>
+                <Stack direction={mobileDevice ? 'column' : 'row'} justify='center'>
+                    <Flex align={mobileDevice ? 'center' : 'center'} direction={mobileDevice ? 'column' : 'row'} justify='center'>
+                        <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={AiOutlineStar} />}
+                            heading='4.8 Rating' Avatar1={<Avatar size='xs' />} Avatar2={<Avatar size='xs' />}
+                            Avatar3={<Avatar size='xs' />} coloredText='+836' rightText='members' buttonText='Join Community' btnColor='#217BF4'
+                        />
+                        <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={BsTrophy} />}
+                            heading='Awwwards' Avatar1={<Icon fontSize='2em' color='red' as={BsGithub} />} leftText='Best of ' coloredText='2021'
+                            rightText='on github' buttonText='Go to awards'
+                        />
+                    </Flex>
+                    <VStack align={mobileDevice ? 'center' : 'start'} justify='center' gap='2em' mt={mobileDevice ? '3em' : '0em'}>
+                        <Stack>
+                            <Text textAlign={mobileDevice ? 'center' : 'left'} fontWeight='500' color='#217BF4' fontSize='1.5em'>Our Achievement</Text>
+                            <Heading textAlign={mobileDevice ? 'center' : 'left'} color='#0A093D' fontFamily='Inter' fontWeight='600' fontSize='2em'>
+                                We are Connecting <br />
+                                You To The Digital Life.
+                            </Heading>
+                        </Stack>
+                        <Text textAlign={mobileDevice ? 'center' : 'left'}>
+                            The scope the Social Media becomes crucial Is <br />
+                            helps the business to directly engage with their <br />
+                            needs and wants.
+                        </Text>
+                        <Button h='3em' p='1em' alignItems='center' color='white' _hover={{ bgColor: 'teal' }} bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
+                    </VStack>
+                </Stack>
             </Box>
         </React.Fragment>
 

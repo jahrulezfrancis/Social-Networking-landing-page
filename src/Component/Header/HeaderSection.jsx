@@ -4,8 +4,8 @@ import People from "../Images/Iamge.png"
 export function HeaderSec() {
     const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box m={mobileDevice ? '6em 0em' : '3em 1em'} p='1em' background='linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%)'>
-            <Flex justify='space-around' direction={mobileDevice ? 'column' : 'row'}>
+        <Box m={mobileDevice ? '5em 0em' : '3em 1em'} p='1em' background='linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%)'>
+            <Flex justify='space-around' align='center' direction={mobileDevice ? 'column' : 'row'}>
                 <VStack align='start' gap='2em'>
                     <Button color='#217BF4'>Netbook community</Button>
                     <Stack display={mobileDevice ? 'block' : 'none'} justify='center' align='center'>
