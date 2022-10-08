@@ -33,7 +33,7 @@ export function BlogSection() {
                     <Text color='#217BF4' fontSize='1.1em'>Get Our Application</Text>
                     <Heading color='#0A093D' fontSize='2.2em'>Latest News</Heading>
                 </Stack>
-                <HStack w='100vw' gap='2em' overflowX='auto'>
+                <HStack w='100vw' gap='2em' justify='center' overflowX='auto'>
                     <BlogPostTemplate textColor='#656464' iconColor='#656464' Image={PcImage} HeadingText1='It Does Not Matter Hows' HeadingText2='Slowly go as Long' />
                     <BlogPostTemplate textColor='#217BF4' iconColor='#217BF4' Image={GirlDad} HeadingText1='Netbook Network Added' HeadingText2='New Photo Filter' />
                     <BlogPostTemplate textColor='#656464' iconColor='#656464' Image={PinImage} HeadingText1='We Optimised Netbooks' HeadingText2='Better Navigation' />
