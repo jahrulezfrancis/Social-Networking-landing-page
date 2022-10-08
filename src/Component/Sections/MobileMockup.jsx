@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, Text, Heading, Image } from "@chakra-ui/react";
+import { Box, HStack, VStack, Text, Heading, Image, Flex, useMediaQuery } from "@chakra-ui/react";
 import AppStore from "../Images/app-store.png"
 import PlayStore from "../Images/play-store.png"
 import MobileScreen from "../Images/mobile-muckup.png"
@@ -6,11 +6,12 @@ import MobileScreen from "../Images/mobile-muckup.png"
 
 
 export function MobileMockUp() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box w='100%' bgColor='#E5F0FD' mt='5em'>
-            <HStack justify='space-around'>
-                <VStack align='start'>
-                    <Text color='#217BF4' fontSize='1.2em' fontWeight='500'>Get Our Aplication</Text>
+            <Flex direction={mobileDevice ? 'column' : 'row'} align={mobileDevice ? 'center' : 'space-around'} justify={mobileDevice ? 'center' : 'space-around'}>
+                <VStack textAlign={mobileDevice ? 'center' : 'left'} align={mobileDevice ? 'center' : 'start'}>
+                    <Text textAlign={mobileDevice ? 'center' : 'left'} color='#217BF4' fontSize='1.2em' fontWeight='500'>Get Our Aplication</Text>
                     <Heading color='#2F2C4A' fontSize='2.2em'>
                         You Can Easily Find <br />
                         This App…!
@@ -26,7 +27,7 @@ export function MobileMockUp() {
                     </HStack>
                 </VStack>
                 <Image h='28em' src={MobileScreen} alt='' />
-            </HStack>
+            </Flex>
         </Box>
     )
 }
