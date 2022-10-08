@@ -1,4 +1,4 @@
-import { Box, VStack, Text, Heading, HStack, Image, Flex } from "@chakra-ui/react"
+import { Box, VStack, Text, Heading, HStack, Image, Flex, useMediaQuery } from "@chakra-ui/react"
 import One from "../Images/two-pers-blue.png"
 import RedGroup from "../Images/three-persr-ed.png"
 import Forum from "../Images/message.png"
@@ -8,8 +8,9 @@ import Article from "../Images/article.png"
 
 
 function FeaturesTemp(props) {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box w='30em' h='8em' boxShadow='14px 22px 52px -12px rgba(127, 127, 127, 0.13)'>
+        <Box w={mobileDevice ? '20em' : '30em'} h='8em' boxShadow='14px 22px 52px -12px rgba(127, 127, 127, 0.13)'>
             <HStack w="100%">
                 <Image src={props.image} alt='community image' />
                 <VStack align='start'>
@@ -22,18 +23,19 @@ function FeaturesTemp(props) {
 }
 
 export function Features() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box mt='10em' w='100%'>
-            <VStack justify='center'>
+            <VStack justify='center' gap='2em'>
                 <VStack gap='1em'>
                     <Text color='#217BF4' fontSize='1.2em' fontWeight='500'>Our Community</Text>
-                    <Heading color='#2F2C4A' fontSize='2.2em'>Community Main Feature</Heading>
+                    <Heading color='#2F2C4A' fontSize='2.2em' textAlign={mobileDevice ? 'center' : 'left'}>Community Main Feature</Heading>
                     <Text textAlign='center' color='#656464' fontWeight='500' fontSize='.9em'>
                         The wise man therefore always holds in these matters <br />
                         to this principle of selection.
                     </Text>
                 </VStack>
-                <Flex flexWrap='wrap' p='2em' justify='space-around' rowGap='5em'>
+                <Flex flexWrap='wrap' p='2em' justify='space-around' rowGap={mobileDevice ? '2em' : '5em'}>
                     <FeaturesTemp image={One} heading='Members, Friends' text1='Members, Friends Connection ( like' text2='followers ), Private Message' />
                     <FeaturesTemp image={RedGroup} heading='Group' text1='Your users can create groups to let other' text2='users to join and talk' />
                     <FeaturesTemp image={Forum} heading='Forum' text1='Forum is ready by BBPress. Your users' text2='can make topics and talk.' />
