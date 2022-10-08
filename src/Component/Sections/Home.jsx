@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Heading, HStack, Icon, Image, List, ListIcon, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Heading, HStack, Icon, Image, List, ListIcon, ListItem, Stack, Text, useMediaQuery, VStack } from "@chakra-ui/react";
 import { GoPrimitiveDot } from "react-icons/go"
 import VidImage from "../Images/vid-image.png"
 import LaptopImage from "../Images/pc-on-table.png"
@@ -10,9 +10,10 @@ import React from "react";
 
 
 export function AboutNetboks() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box pt="5em">
-            <HStack justify='center' gap='5em' align='center'>
+            <Flex direction={mobileDevice ? 'column' : 'row'} justify='center' gap='5em' align='center'>
                 <VStack align='start' p='3em' gap={5}>
                     <Heading color='#217BF4' fontSize='1em'>What's NetBoks?</Heading>
                     <Heading color='#0A093D' lineHeight='1.3em'>Why Join to Netbook <br />
@@ -39,14 +40,14 @@ export function AboutNetboks() {
                         </List>
                     </Stack>
                 </VStack>
-                <HStack gap={5}>
+                <Stack align='center' direction={mobileDevice ? 'column' : 'row'} gap={5}>
                     <Image src={VidImage} alt='' />
                     <VStack>
                         <Image src={LaptopImage} alt='' />
                         <Image src={DataCableImage} alt='' />
                     </VStack>
-                </HStack>
-            </HStack>
+                </Stack>
+            </Flex>
         </Box>
     )
 }
@@ -79,10 +80,11 @@ export function AchieveMentsTemp(props) {
 }
 
 export function AchieveMents() {
+    const [mobileDevice] = useMediaQuery('(max-width: 1000px)')
     return (
         <React.Fragment>
             <Box mt='5em'>
-                <HStack justify='center'>
+                <Flex align={mobileDevice ? 'center' : 'start'} direction={mobileDevice ? 'column' : 'row'} justify='center'>
                     <AchieveMentsTemp headingIcon={<Icon color='#217BF4' fontSize='1.75em' as={AiOutlineStar} />}
                         heading='4.8 Rating' Avatar1={<Avatar size='xs' />} Avatar2={<Avatar size='xs' />}
                         Avatar3={<Avatar size='xs' />} coloredText='+836' rightText='members' buttonText='Join Community' btnColor='#217BF4'
@@ -91,22 +93,22 @@ export function AchieveMents() {
                         heading='Awwwards' Avatar1={<Icon fontSize='2em' color='red' as={BsGithub} />} leftText='Best of ' coloredText='2021'
                         rightText='on github' buttonText='Go to awards'
                     />
-                    <VStack align='start' gap='2em'>
-                        <Stack>
-                            <Text fontWeight='500' color='#217BF4' fontSize='1.5em'>Our Achievement</Text>
-                            <Heading color='#0A093D' fontFamily='Inter' fontWeight='600' fontSize='3em'>
-                                We are Connecting <br />
-                                You The Digital Life.
-                            </Heading>
-                        </Stack>
-                        <Text>
-                            The scope the Social Media becomes crucial Is <br />
-                            helps the business to directly engage with their <br />
-                            needs and wants.
-                        </Text>
-                        <Button h='3em' p='1em' alignItems='center' color='white' _hover={{ bgColor: 'teal' }} bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
-                    </VStack>
-                </HStack>
+                </Flex>
+                <VStack align={mobileDevice ? 'center' : 'start'} justify='center' gap='2em' mt={mobileDevice ? '3em' : '0em'}>
+                    <Stack>
+                        <Text textAlign={mobileDevice ? 'center' : 'left'} fontWeight='500' color='#217BF4' fontSize='1.5em'>Our Achievement</Text>
+                        <Heading textAlign={mobileDevice ? 'center' : 'left'} color='#0A093D' fontFamily='Inter' fontWeight='600' fontSize='2em'>
+                            We are Connecting <br />
+                            You To The Digital Life.
+                        </Heading>
+                    </Stack>
+                    <Text textAlign={mobileDevice ? 'center' : 'left'}>
+                        The scope the Social Media becomes crucial Is <br />
+                        helps the business to directly engage with their <br />
+                        needs and wants.
+                    </Text>
+                    <Button h='3em' p='1em' alignItems='center' color='white' _hover={{ bgColor: 'teal' }} bgColor='#217BF4' rightIcon={<BiRightArrowAlt />}>Discover Me</Button>
+                </VStack>
             </Box>
         </React.Fragment>
 
