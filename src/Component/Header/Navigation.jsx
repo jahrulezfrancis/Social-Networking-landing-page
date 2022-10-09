@@ -43,6 +43,9 @@ export function NavigatonBar() {
                         <ListItem>
                             <NavLink>Events</NavLink>
                         </ListItem>
+                        <ListItem>
+                            <NavLink to='/home-2'>Home V2</NavLink>
+                        </ListItem>
                     </Flex>
                     <Flex>
                         <InputGroup>
