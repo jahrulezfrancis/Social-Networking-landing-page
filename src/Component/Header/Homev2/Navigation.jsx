@@ -1,7 +1,6 @@
-import { Box, Flex, Image, List, ListItem, InputGroup, InputLeftElement, Input, HStack, Button, useMediaQuery, } from "@chakra-ui/react";
+import { Box, Flex, Image, List, ListItem, HStack, Button, useMediaQuery, } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import HeaderLogo from "../../Images/Besnik.png"
-import { MdSearch } from "react-icons/md"
 import { BiChevronDown } from "react-icons/bi"
 import { Menu, MenuButton, MenuList, MenuItem, } from '@chakra-ui/react'
 // import { CgMenuGridO } from "react-icons/cg"
@@ -17,15 +16,12 @@ export function NavigatonBarV2() {
                             <NavLink><Image src={HeaderLogo} alt='header Logo' /></NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink>Home</NavLink>
-                        </ListItem>
-                        <ListItem>
                             <NavLink>
                                 <Menu>
                                     {({ isOpen }) => (
                                         <>
-                                            <MenuButton isActive={isOpen} style={{ background: 'transparent' }} as={Button} rightIcon={<BiChevronDown />}>
-                                                Community
+                                            <MenuButton color='#FFFFFF' isActive={isOpen} style={{ background: 'transparent' }} as={Button} rightIcon={<BiChevronDown />}>
+                                                Solution
                                             </MenuButton>
                                             <MenuList>
                                                 <MenuItem>Forum</MenuItem>
@@ -36,22 +32,18 @@ export function NavigatonBarV2() {
                                 </Menu>
                             </NavLink>
                         </ListItem>
-                        <ListItem>
-                            <NavLink>Blog</NavLink>
+                        <ListItem color='#FFFFFF'>
+                            <NavLink>Plans</NavLink>
                         </ListItem>
-                        <ListItem>
-                            <NavLink>Events</NavLink>
+                        <ListItem color='#FFFFFF'>
+                            <NavLink>Resource</NavLink>
+                        </ListItem>
+                        <ListItem color='#FFFFFF'>
+                            <NavLink>Blog</NavLink>
                         </ListItem>
                     </Flex>
                     <Flex>
-                        <InputGroup>
-                            <InputLeftElement
-                                pointerEvents='none'
-                                children={<MdSearch color='gray.300' />}
-                            />
-                            <Input w='8em' type='tel' placeholder='Search' />
-                        </InputGroup>
-                        <Button bgColor='#217BF4' w='7em'>Login</Button>
+                        <Button color='#FFFAF9' backdropFilter='24px' bgColor='rgba(255, 255, 255, 0.2)' w='9.6em'>Request Demo</Button>
                     </Flex>
                 </HStack>
             </List>
