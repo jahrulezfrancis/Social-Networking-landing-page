@@ -38,7 +38,7 @@ export function NavigatonBar() {
                             </NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink>Blog</NavLink>
+                            <NavLink exact activeStyle={{ color: 'red' }}>Blog</NavLink>
                         </ListItem>
                         <ListItem>
                             <NavLink>Events</NavLink>
