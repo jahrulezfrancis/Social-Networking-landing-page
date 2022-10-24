@@ -53,7 +53,7 @@ export function NavigatonBar() {
                                 pointerEvents='none'
                                 children={<MdSearch color='gray.300' />}
                             />
-                            <Input w='8em' type='tel' placeholder='Search' />
+                            <Input pl='2em' w='8em' type='tel' placeholder='Search' />
                         </InputGroup>
                         <Button bgColor='#217BF4' w='7em'>Login</Button>
                     </Flex>
