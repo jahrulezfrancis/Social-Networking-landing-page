@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { MiddleSection } from "../Header/Homev2/MiddleSection";
 import { NavigatonBarV2 } from "../Header/Homev2/Navigation";
 
 
@@ -17,6 +18,7 @@ export function HomePageV2() {
     return (
         <Box>
             <PageV2Header />
+            <MiddleSection />
         </Box>
     )
 }
