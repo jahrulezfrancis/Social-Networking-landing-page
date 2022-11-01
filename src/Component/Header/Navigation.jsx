@@ -21,7 +21,7 @@ export function NavigatonBar() {
                             <NavLink>Home</NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink>
+                            <NavLink exact activeStyle={{ color: 'red' }}>
                                 <Menu>
                                     {({ isOpen }) => (
                                         <>
@@ -41,10 +41,10 @@ export function NavigatonBar() {
                             <NavLink exact activeStyle={{ color: 'red' }}>Blog</NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink>Events</NavLink>
+                            <NavLink exact activeStyle={{ color: 'red' }}>Events</NavLink>
                         </ListItem>
                         <ListItem>
-                            <NavLink to='/home-2'>Home V2</NavLink>
+                            <NavLink exact activeStyle={{ color: 'red' }} to='/home-2'>Home V2</NavLink>
                         </ListItem>
                     </Flex>
                     <Flex>
